@@ -33,9 +33,9 @@ def news(the_content):
 
 bot = telebot.TeleBot(token="6189365095:AAEUQhXztkZBbxGTzMZvoolyDFkDpOIEhyQ")
 
-while True:
-    titles, paragraphs, image_urls = news(content)
+
+titles, paragraphs, image_urls = news(content)
 
     for title, paragraph, image_url in zip(titles, paragraphs, image_urls):
         bot.send_message(chat_id='-1001720492333', text=f'{image_url}\n\n {title}\n\n{paragraph}')
-    time.sleep(10)
+
